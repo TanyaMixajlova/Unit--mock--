@@ -1,13 +1,13 @@
-package greeter.controller;
+package com.example.greeter.greeter.controller;
 
-import greeter.servise.GreeterService;
+import com.example.greeter.greeter.servise.GreeterService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/greeter")
+@RequestMapping("/com/example/greeter/greeter")
 public class GreeterController {
     private final GreeterService greeterService;
 

@@ -1,4 +1,4 @@
-package greeter.servise;
+package com.example.greeter.greeter.servise;
 
 import org.springframework.stereotype.Service;
 
