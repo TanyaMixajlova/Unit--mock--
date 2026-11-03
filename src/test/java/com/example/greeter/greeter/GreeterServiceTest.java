@@ -1,5 +1,6 @@
 package com.example.greeter.greeter;
 
+import com.example.greeter.greeter.servise.HelloService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.example.greeter.greeter.servise.GreeterService;
@@ -7,7 +8,9 @@ import com.example.greeter.greeter.servise.GreeterService;
 public class GreeterServiceTest {
     // Так как Spring в этом тесте не создает бины и не управляет контекстом
     // нам нужно создать GreeterService вручную, используя ключевое слово new
-    private final GreeterService greeterService = new GreeterService();
+    private final GreeterService greeterService = new GreeterService(
+            new HelloService()
+    );
 
     // В тестах мы обращаемся к полю тестового класса greeterService.
     // Так как тестовые классы - такие же классы, то для них выполняются

@@ -4,12 +4,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class GreeterService {
-    // Данный класс не отличается от класса Greeter в предыдущем примере
+    private final HelloService helloService;
+
+    public GreeterService(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
     public String greet(String name) {
         if (name == null || name.isBlank()) {
-            return "Hello, Anonymous";
+            return helloService.randomHello() + ", Anonymous";
         } else {
-            return "Hello, " + name;
+            return helloService.randomHello() + ", " + name;
         }
     }
 }
