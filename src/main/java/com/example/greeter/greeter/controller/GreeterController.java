@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/com/example/greeter/greeter")
+@RequestMapping("greeter")
 public class GreeterController {
     private final GreeterService greeterService;
 
